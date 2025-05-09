@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
         Component: OtherLayout,
         children: [
             {
-                path: '/',
+                path: '/admin',
                 Component: Admin
             }
         ]
@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
         Component: OtherLayout,
         children: [
             {
-                path: '/',
+                path: '/basket',
                 Component: Basket
             }
         ]
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         Component: OtherLayout,
         children: [
             {
-                path: '/',
+                path: '/wishlist',
                 Component: Wishlist
             }
         ]
