@@ -18,7 +18,9 @@ export const deleteProductThunk = createAsyncThunk("products/delete", async (id)
 
 const productsSlice = createSlice({
     name: 'products',
-    initialState: {},
+    initialState: {
+		products: []
+	},
     reducers: {},
     extraReducers: (builder) => {
         builder

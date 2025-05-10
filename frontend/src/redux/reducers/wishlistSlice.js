@@ -18,7 +18,9 @@ export const deleteWishlistThunk = createAsyncThunk("wishlist/delete", async (id
 
 const wishlistSlice = createSlice({
     name: 'wishlist',
-    initialState: {},
+    initialState: {
+		wishlist: []
+	},
     reducers: {},
     extraReducers: (builder) => {
         builder
