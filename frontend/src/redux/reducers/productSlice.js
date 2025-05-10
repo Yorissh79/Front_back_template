@@ -23,17 +23,17 @@ const productsSlice = createSlice({
     extraReducers: (builder) => {
         builder
 
-            .addCase(getProductThunk.fulfilled, async (state, action) => {
+            .addCase(getProductThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.products = action.payload;
             })
 
-            .addCase(postProductThunk.fulfilled, async (state, action) => {
+            .addCase(postProductThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.products.push(action.payload);
             })
 
-            .addCase(deleteProductThunk.fulfilled, async (state, action) => {
+            .addCase(deleteProductThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.products = state.products.filter(products => products._id !== action.payload);
             })

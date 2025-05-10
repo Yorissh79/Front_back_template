@@ -23,17 +23,17 @@ const wishlistSlice = createSlice({
     extraReducers: (builder) => {
         builder
 
-        .addCase(getWishlistThunk.fulfilled, async (state, action) => {
+        .addCase(getWishlistThunk.fulfilled, (state, action) => {
             state.loading = false;
             state.wishlist = action.payload;
         })
 
-        .addCase(postWishlistThunk.fulfilled, async (state, action) => {
+        .addCase(postWishlistThunk.fulfilled, (state, action) => {
             state.loading = false;
             state.wishlist.push(action.payload);
         })
 
-        .addCase(deleteWishlistThunk.fulfilled, async (state, action) => {
+        .addCase(deleteWishlistThunk.fulfilled, (state, action) => {
             state.loading = false;
             state.wishlist = state.wishlist.filter(wishlist => wishlist._id !== action.payload);
         })

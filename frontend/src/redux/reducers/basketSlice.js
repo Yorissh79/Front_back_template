@@ -23,17 +23,17 @@ const basketSlice = createSlice({
     extraReducers: (builder) => {
         builder
 
-            .addCase(getBasketThunk.fulfilled, async (state, action) => {
+            .addCase(getBasketThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.basket = action.payload;
             })
 
-            .addCase(postBasketThunk.fulfilled, async (state, action) => {
+            .addCase(postBasketThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.basket.push(action.payload);
             })
 
-            .addCase(deleteBasketThunk.fulfilled, async (state, action) => {
+            .addCase(deleteBasketThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.basket = state.basket.filter(basket => basket._id !== action.payload);
             })
